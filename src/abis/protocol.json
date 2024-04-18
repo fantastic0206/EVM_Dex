@@ -1,0 +1,518 @@
+{
+  "abi": [
+    {
+      "type": "constructor",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "pulseXSwapRouterAddress",
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "SAMTokenAddress",
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "lpTokenAddress",
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "treasuryAddress",
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "defaultUpline",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "OwnershipTransferred",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "previousOwner",
+          "internalType": "address",
+          "indexed": true
+        },
+        {
+          "type": "address",
+          "name": "newOwner",
+          "internalType": "address",
+          "indexed": true
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "bool", "name": "", "internalType": "bool" }],
+      "name": "BOND_ACTIVATIONS",
+      "inputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+      "name": "BOND_FREEZE_PERCENTS",
+      "inputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+      "name": "BOND_FREEZE_PERIODS",
+      "inputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "address", "name": "", "internalType": "address" }],
+      "name": "DEFAULT_TREASURY",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "address", "name": "", "internalType": "address" }],
+      "name": "DEFAULT_UPLINE",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "address", "name": "", "internalType": "address" }],
+      "name": "LP_TOKEN_ADDRESS",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "address", "name": "", "internalType": "address" }],
+      "name": "PULSEX_SWAP_ROUTER_ADDRESS",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+      "name": "REFERRAL_PERCENT",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "address", "name": "", "internalType": "address" }],
+      "name": "TOKEN_ADDRESS",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "activateBondType",
+      "inputs": [
+        { "type": "uint8", "name": "bondType", "internalType": "uint8" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        { "type": "uint256", "name": "amount", "internalType": "uint256" },
+        {
+          "type": "uint256",
+          "name": "creationTime",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "freezePeriod",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "profitPercent",
+          "internalType": "uint256"
+        },
+        { "type": "uint256", "name": "stakeAmount", "internalType": "uint256" },
+        { "type": "uint256", "name": "stakeTime", "internalType": "uint256" },
+        {
+          "type": "uint256",
+          "name": "collectedTime",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "collectedReward",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "stakingRewardLimit",
+          "internalType": "uint256"
+        },
+        { "type": "bool", "name": "isClosed", "internalType": "bool" }
+      ],
+      "name": "bonds",
+      "inputs": [
+        { "type": "address", "name": "", "internalType": "address" },
+        { "type": "uint8", "name": "", "internalType": "uint8" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "payable",
+      "outputs": [],
+      "name": "buy",
+      "inputs": [
+        { "type": "address", "name": "upline", "internalType": "address" },
+        { "type": "uint8", "name": "bondType", "internalType": "uint8" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "changePriceBalancerPercent",
+      "inputs": [
+        { "type": "uint256", "name": "percent", "internalType": "uint256" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "claim",
+      "inputs": [
+        { "type": "uint256", "name": "tokensAmount", "internalType": "uint256" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "deactivateBondType",
+      "inputs": [
+        { "type": "uint8", "name": "bondType", "internalType": "uint8" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+      "name": "getETHAmount",
+      "inputs": [
+        { "type": "uint256", "name": "tokensAmount", "internalType": "uint256" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        { "type": "uint256", "name": "bonusPercent", "internalType": "uint256" }
+      ],
+      "name": "getHoldBonusPercent",
+      "inputs": [
+        { "type": "address", "name": "userAddr", "internalType": "address" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        { "type": "uint256", "name": "bonusPercent", "internalType": "uint256" }
+      ],
+      "name": "getLiquidityBonusPercent",
+      "inputs": [
+        { "type": "address", "name": "userAddr", "internalType": "address" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        { "type": "uint256", "name": "bonusPercent", "internalType": "uint256" }
+      ],
+      "name": "getLiquidityGlobalBonusPercent",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "liquidityETH",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "liquidityERC20",
+          "internalType": "uint256"
+        }
+      ],
+      "name": "getTokenLiquidity",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+      "name": "getTokensAmount",
+      "inputs": [
+        { "type": "uint256", "name": "amount", "internalType": "uint256" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        {
+          "type": "tuple",
+          "name": "user",
+          "internalType": "struct Models.User",
+          "components": [
+            { "type": "address", "name": "upline", "internalType": "address" },
+            { "type": "uint8", "name": "bondsNumber", "internalType": "uint8" },
+            { "type": "uint256", "name": "balance", "internalType": "uint256" },
+            {
+              "type": "uint256",
+              "name": "totalInvested",
+              "internalType": "uint256"
+            },
+            {
+              "type": "uint256",
+              "name": "liquidityCreated",
+              "internalType": "uint256"
+            },
+            {
+              "type": "uint256",
+              "name": "totalRefReward",
+              "internalType": "uint256"
+            },
+            {
+              "type": "uint256",
+              "name": "refTurnover",
+              "internalType": "uint256"
+            },
+            {
+              "type": "uint256",
+              "name": "lastActionTime",
+              "internalType": "uint256"
+            },
+            {
+              "type": "address[]",
+              "name": "referrals",
+              "internalType": "address[]"
+            },
+            { "type": "uint256", "name": "refs", "internalType": "uint256" },
+            {
+              "type": "uint256",
+              "name": "refsNumber",
+              "internalType": "uint256"
+            },
+            {
+              "type": "uint256",
+              "name": "totalRebonded",
+              "internalType": "uint256"
+            },
+            {
+              "type": "uint256",
+              "name": "totalSold",
+              "internalType": "uint256"
+            },
+            {
+              "type": "uint256",
+              "name": "totalClaimed",
+              "internalType": "uint256"
+            }
+          ]
+        },
+        {
+          "type": "uint256",
+          "name": "userTokensBalance",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "userHoldBonus",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "userLiquidityBonus",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "globalLiquidityBonus",
+          "internalType": "uint256"
+        },
+        {
+          "type": "bool[5]",
+          "name": "bondActivations",
+          "internalType": "bool[5]"
+        },
+        {
+          "type": "address[]",
+          "name": "userReferrals",
+          "internalType": "address[]"
+        }
+      ],
+      "name": "getUIData",
+      "inputs": [
+        { "type": "address", "name": "userAddr", "internalType": "address" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "influencerBond",
+      "inputs": [
+        { "type": "address", "name": "userAddr", "internalType": "address" },
+        { "type": "uint256", "name": "tokensAmount", "internalType": "uint256" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [{ "type": "address", "name": "", "internalType": "address" }],
+      "name": "owner",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "rebond",
+      "inputs": [
+        { "type": "uint256", "name": "tokensAmount", "internalType": "uint256" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "renounceOwnership",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "sell",
+      "inputs": [
+        { "type": "uint256", "name": "tokensAmount", "internalType": "uint256" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "setTreasury",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "contractAddress",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "payable",
+      "outputs": [],
+      "name": "stake",
+      "inputs": [
+        { "type": "uint8", "name": "bondIdx", "internalType": "uint8" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "payable",
+      "outputs": [],
+      "name": "swap",
+      "inputs": [{ "type": "uint8", "name": "swaps", "internalType": "uint8" }]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "transfer",
+      "inputs": [
+        { "type": "uint8", "name": "bondIdx", "internalType": "uint8" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "transferOwnership",
+      "inputs": [
+        { "type": "address", "name": "newOwner", "internalType": "address" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        { "type": "uint256", "name": "balance", "internalType": "uint256" }
+      ],
+      "name": "userBalance",
+      "inputs": [
+        { "type": "address", "name": "userAddress", "internalType": "address" }
+      ]
+    },
+    {
+      "type": "function",
+      "stateMutability": "view",
+      "outputs": [
+        { "type": "address", "name": "upline", "internalType": "address" },
+        { "type": "uint8", "name": "bondsNumber", "internalType": "uint8" },
+        { "type": "uint256", "name": "balance", "internalType": "uint256" },
+        {
+          "type": "uint256",
+          "name": "totalInvested",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "liquidityCreated",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "totalRefReward",
+          "internalType": "uint256"
+        },
+        { "type": "uint256", "name": "refTurnover", "internalType": "uint256" },
+        {
+          "type": "uint256",
+          "name": "lastActionTime",
+          "internalType": "uint256"
+        },
+        { "type": "uint256", "name": "refs", "internalType": "uint256" },
+        { "type": "uint256", "name": "refsNumber", "internalType": "uint256" },
+        {
+          "type": "uint256",
+          "name": "totalRebonded",
+          "internalType": "uint256"
+        },
+        { "type": "uint256", "name": "totalSold", "internalType": "uint256" },
+        { "type": "uint256", "name": "totalClaimed", "internalType": "uint256" }
+      ],
+      "name": "users",
+      "inputs": [{ "type": "address", "name": "", "internalType": "address" }]
+    },
+    { "type": "receive", "stateMutability": "payable" }
+  ]
+}

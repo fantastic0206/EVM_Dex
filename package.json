@@ -1,0 +1,85 @@
+{
+  "name": "sam",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@iconify/react": "^4.1.1",
+    "@lingui/core": "3.13.3",
+    "@lingui/react": "3.13.3",
+    "@mui/icons-material": "^5.14.16",
+    "@mui/lab": "^5.0.0-alpha.153",
+    "@mui/material": "^5.14.17",
+    "@rainbow-me/rainbowkit": "^1.2.0",
+    "@rumess/react-flip-countdown": "^1.2.6",
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.3",
+    "clsx": "^2.0.0",
+    "concurrently": "^8.2.2",
+    "cookie-parser": "^1.4.6",
+    "date-fns": "^2.30.0",
+    "ethers": "^5.7.2",
+    "ethers-decode-error": "^1.0.0",
+    "express-fileupload": "^1.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash.merge": "^4.6.2",
+    "mongoose": "^8.3.1",
+    "nodemon": "^3.0.1",
+    "paytmchecksum": "^1.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loading": "^2.0.3",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.8.0",
+    "react-socks": "^2.2.0",
+    "react-toastify": "^9.1.3",
+    "react-tooltip": "^5.24.0",
+    "request": "^2.88.2",
+    "sqlite3": "^5.1.6",
+    "validator": "^13.11.0",
+    "viem": "^1.16.6",
+    "wagmi": "^1.4.5",
+    "web-vitals": "^2.1.4",
+    "web3": "^4.2.2",
+    "webpack": "^5.89.0"
+  },
+  "scripts": {
+    "start": "npm run client| npm run server",
+    "build": "react-app-rewired build",
+    "client": "react-app-rewired start",
+    "server": "node auth/server.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@lingui/cli": "3.13.3",
+    "@lingui/loader": "3.13.3",
+    "@lingui/macro": "3.13.3",
+    "buffer": "6.0.3",
+    "eslint": "^8.41.0",
+    "eslint-config-react-app": "^7.0.1",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.4",
+    "prettier": "2.5.1",
+    "react-app-rewired": "2.2.1"
+  }
+}
